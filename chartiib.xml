@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.x" method="upgrade">
+    <name>com_chartiib</name>
+    <creationDate>2015-08-29</creationDate>
+    <copyright>Copyright (C). Tous droits réservés.</copyright>
+    <license>GNU/GPL version 2 ou version ultérieure</license>
+    <author>Briand Idossou</author>
+    <authorEmail>idossoubr@yahoo.fr</authorEmail>
+    <authorUrl>http://ibrini.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Composant permettant de réaliser l'organigramme d'une entrepris. Retrouvez d'autres extensions sur http://ibrini.com</description>
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>chartiib.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        <language tag="en-GB">en-GB/en-GB.com_chartiib.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.com_chartiib.ini</language>
+
+
+    </languages>
+    <administration>
+        
+        <menu>COM_CHARTIIB</menu>
+        <submenu>
+            <menu link="option=com_chartiib&amp;view=employees" view="employees" >COM_CHARTIIB_TITLE_EMPLOYEES</menu>
+            <menu link="option=com_chartiib&amp;view=postes" view="postes" >COM_CHARTIIB_TITLE_POSTES</menu>
+            <menu link="option=com_chartiib&amp;view=relations" view="relations" >COM_CHARTIIB_TITLE_RELATIONS</menu>
+            <menu link="option=com_chartiib&amp;view=hierarchies" view="hierarchies" >COM_CHARTIIB_TITLE_HIERARCHIES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>chartiib.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            <language tag="en-GB">en-GB/en-GB.com_chartiib.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_chartiib.sys.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_chartiib.ini</language>
+            <language tag="fr-FR">fr-FR/fr-FR.com_chartiib.sys.ini</language>
+
+
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="chartiib"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by Ibrini component generator -->
+<!-- http://www.ibrini.com/ -->

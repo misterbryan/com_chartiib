@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="id" type="text" default="0" label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_ID"
+               readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC" /> 
+
+        <field name="created_by" type="createdby" default="" 
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_CREATED_BY"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_CREATED_BY"  /> 
+
+        <field name="name" type="text"
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_NAME"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_NAME" 
+               required="1"
+        />
+        <field name="address" type="textarea"
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_ADDRESS"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_ADDRESS" 
+               rows="4"
+        />
+        <field name="age" type="text"
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_AGE"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_AGE"
+        />
+        <field name="notes" type="textarea"
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_NOTES"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_NOTES" 
+               rows="6"
+        />
+        <field name="photo" type="media"
+               label="COM_CHARTIIB_FORM_LBL_EMPLOYEE_PHOTO"
+               description="COM_CHARTIIB_FORM_DESC_EMPLOYEE_PHOTO" 
+        />
+
+        
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field> 
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+    </fieldset> 
+
+   
+
+</form>

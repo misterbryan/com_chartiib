@@ -1,0 +1,41 @@
+/**
+ * @version     1.0.0
+ * @package     com_chartiib
+ * @copyright   Copyright (C). Tous droits réservés.
+ * @license     GNU/GPL version 2 ou version ultérieure
+ * @author      Briand Idossou <idossoubr@yahoo.fr> - http://ibrini.com
+ */
+
+div.orgChart {
+    border: 0 solid #cccccc !important; 
+    background-color: transparent !important; 
+}
+div.orgChart h2 {
+    font-size: 0.9em !important;
+}
+
+.photo_iib {
+    max-height: 150px;
+}
+div.orgChart div.hasChildren, div.orgChart div.node {
+    background-color: #F6F6F6;
+}
+div.orgChart div.node {
+    border: 0;
+    padding: 3px;
+    border-radius: 0;
+    box-shadow: 4px 4px 6px #888888;
+    -moz-border-radius: 0;
+    -moz-box-shadow: 2px 2px 3px #888888;
+     -webkit-border-radius: 0; 
+    -webkit-box-shadow: 2px 2px 3px #888888;
+}
+div.orgChart tr.lines td.right {
+    border-left: 2px solid black;
+}
+div.orgChart tr.lines td.top {
+    border-top: 2px solid black;
+}
+div.orgChart tr.lines td.left {
+    border-right: 2px solid black;
+}
